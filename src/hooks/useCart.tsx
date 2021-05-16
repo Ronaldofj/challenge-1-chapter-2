@@ -50,7 +50,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
 
         newCart[productIndex].amount += 1;
 
-        setCart(newCart);
+        setCart([...newCart]);
 
         localStorage.setItem('@RocketShoes:cart', JSON.stringify(newCart));
 

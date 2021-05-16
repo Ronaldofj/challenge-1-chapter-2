@@ -36,10 +36,6 @@ const Home = (): JSX.Element => {
       try {
         const response = await api.get('/products');
 
-        const test = await api.get('/products/1');
-
-        console.log(test)
-
         setProducts(response.data);
       } catch {
         setProducts([])
